@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title>Home - NGO Dashboard</title>
+    <title>Settings - NGO Dashboard</title>
 
     <link rel="stylesheet" href="../css/prix.css">
     <link rel="stylesheet" href="../css/all_page.css">
-    <link rel="stylesheet" href="../css/dashboard__global.css">
-    <link rel="stylesheet" href="../css/dashboard__index.css">
+    <link rel="stylesheet" href="../css/dashboard__settings.css">
 
     <script src="../js/jquery.js"></script>
 </head>
@@ -145,32 +144,56 @@
 
     <div class="content-wrap">
         <div class="content git-grid">
-            <div class="content-welcome-title-wrap">
-                <h1 style="text-align:center; font-size:4em;">Hello, &lt;USERNAME&gt;</h1>
-            </div>
             <div class="content-sub-title-wrap">
-                <h1 style="text-align:center; color:#4c4c4c;">Select Your Action</h1>
+                <h1 style="text-align:center; color:#4c4c4c;">Settings</h1>
+                <p style="text-align:center;">Values are updated automatically.</p>
             </div>
-            <div class="content-actions-wrap">
-                <div style="display: table; margin: 0 auto;">
-                    <div class="content-actions disp-flex">
-                        <a href="./donor_requests.php" target="_blank">
-                            <div class="dashboard-action">
-                                <p>Donor Requests</p>
-                            </div>
-                        </a>
-                        <a href="./manage_requirements.php" target="_blank">
-                            <div class="dashboard-action">
-                                <p>Manage Requirements</p>
-                            </div>
-                        </a>
 
-                        <a href="./settings.php" target="_blank">
-                            <div class="dashboard-action">
-                                <p>My Settings</p>
-                            </div>
-                        </a>
+            <div class="settings-wrap">
+                <div class="settings">
+                    <div class="a-setting">
+                        <label for="uname">
+                            Name
+                        </label>
+                        <input type="text" class="signin-ip" name="username" placeholder="Username">
                     </div>
+
+                    <div class="a-setting">
+                        <label for="uname">
+                            NGO Name
+                        </label>
+                        <input type="text" class="signin-ip" name="username" placeholder="NGO Name">
+                    </div>
+
+                    <div class="a-setting">
+                        <label for="uname">
+                            NGO Address
+                        </label>
+                        <input type="text" class="signin-ip" name="username" placeholder="NGO Address">
+                    </div>
+
+                    <div class="a-setting">
+                        <label for="uname">
+                            NGO Email
+                        </label>
+                        <input type="text" class="signin-ip" name="username" placeholder="NGO Email">
+                    </div>
+
+                    <div class="a-setting">
+                        <label for="uname">
+                            NGO Number
+                        </label>
+                        <input type="text" class="signin-ip" name="username" placeholder="Contact Number">
+                    </div>
+
+                    <div class="a-setting">
+                        <label for="uname">
+                            About Your NGO
+                        </label>
+                        <input type="text" class="signin-ip" name="username" placeholder="About NGO">
+                    </div>
+
+                    <a>Update Your Profile Password</a>
                 </div>
             </div>
         </div>

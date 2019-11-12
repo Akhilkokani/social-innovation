@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title>Home - NGO Dashboard</title>
+    <title>Donor Requests - NGO Dashboard</title>
 
     <link rel="stylesheet" href="../css/prix.css">
     <link rel="stylesheet" href="../css/all_page.css">
-    <link rel="stylesheet" href="../css/dashboard__global.css">
-    <link rel="stylesheet" href="../css/dashboard__index.css">
+    <link rel="stylesheet" href="../css/dashboard__donor_requests.css">
 
     <script src="../js/jquery.js"></script>
 </head>
@@ -145,33 +144,67 @@
 
     <div class="content-wrap">
         <div class="content git-grid">
-            <div class="content-welcome-title-wrap">
-                <h1 style="text-align:center; font-size:4em;">Hello, &lt;USERNAME&gt;</h1>
-            </div>
             <div class="content-sub-title-wrap">
-                <h1 style="text-align:center; color:#4c4c4c;">Select Your Action</h1>
+                <h1 style="text-align:center; color:#4c4c4c;">Donor Requests</h1>
             </div>
-            <div class="content-actions-wrap">
-                <div style="display: table; margin: 0 auto;">
-                    <div class="content-actions disp-flex">
-                        <a href="./donor_requests.php" target="_blank">
-                            <div class="dashboard-action">
-                                <p>Donor Requests</p>
-                            </div>
-                        </a>
-                        <a href="./manage_requirements.php" target="_blank">
-                            <div class="dashboard-action">
-                                <p>Manage Requirements</p>
-                            </div>
-                        </a>
-
-                        <a href="./settings.php" target="_blank">
-                            <div class="dashboard-action">
-                                <p>My Settings</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <div class="donor-requests-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="text-align:left;">Sl. No.</th>
+                            <th>For Product</th>
+                            <th>Name</th>
+                            <th>Contact Number</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Clothes for Teenage Kids</td>
+                            <td>Akhil MK</td>
+                            <td>9090909090</td>
+                            <td>
+                                <div class="requirement-actions disp-flex">
+                                    <a>Delete Donor Request</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Clothes for Teenage Kids</td>
+                            <td>Akhil MK</td>
+                            <td>9090909090</td>
+                            <td>
+                                <div class="requirement-actions disp-flex">
+                                    <a>Delete Donor Request</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clothes for Teenage Kids</td>
+                            <td>Akhil MK</td>
+                            <td>9090909090</td>
+                            <td>
+                                <div class="requirement-actions disp-flex">
+                                    <a>Delete Donor Request</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Clothes for Teenage Kids</td>
+                            <td>Akhil MK</td>
+                            <td>9090909090</td>
+                            <td>
+                                <div class="requirement-actions disp-flex">
+                                    <a>Delete Donor Request</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

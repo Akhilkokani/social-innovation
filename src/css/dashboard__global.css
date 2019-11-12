@@ -1,0 +1,21 @@
+
+/*=============================================
+=            DASHBOARD GLOBAL CSS            =
+=============================================*/
+
+.signin-ip-block {
+  margin-bottom: 2em;
+}
+
+.signin-ip-block:nth-child(even) {
+  margin-bottom: 3em;
+}
+
+.signin-ip {
+  margin-top: 5px;
+}
+/** Sign In Modal END */
+
+
+
+/*=====  End of DASHBOARD GLOBAL CSS  ======*/

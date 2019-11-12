@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title>Home - NGO Dashboard</title>
+    <title>Manage Requirements - NGO Dashboard</title>
 
     <link rel="stylesheet" href="../css/prix.css">
     <link rel="stylesheet" href="../css/all_page.css">
     <link rel="stylesheet" href="../css/dashboard__global.css">
-    <link rel="stylesheet" href="../css/dashboard__index.css">
+    <link rel="stylesheet" href="../css/dashboard__manage_requirements.css">
 
     <script src="../js/jquery.js"></script>
+    <script src="../js/dashboard__manage_requirements.js"></script>
 </head>
 <body>
     <div class="header-wrap">
@@ -143,35 +144,161 @@
         </div>
     </div>
 
-    <div class="content-wrap">
-        <div class="content git-grid">
-            <div class="content-welcome-title-wrap">
-                <h1 style="text-align:center; font-size:4em;">Hello, &lt;USERNAME&gt;</h1>
-            </div>
+    <div class="content git-grid">
+        <div class="_">
             <div class="content-sub-title-wrap">
-                <h1 style="text-align:center; color:#4c4c4c;">Select Your Action</h1>
+                <h1 style="text-align:center; color:#4c4c4c;">Manage Requirements</h1>
+                <p style="color: #1e90ff; text-align:center; cursor:pointer;" title="Add New Requirements" onclick="document.querySelector('.add-requirement-modal-wrapper').style.display = 'block';">Add New Requirement</p>
             </div>
-            <div class="content-actions-wrap">
-                <div style="display: table; margin: 0 auto;">
-                    <div class="content-actions disp-flex">
-                        <a href="./donor_requests.php" target="_blank">
-                            <div class="dashboard-action">
-                                <p>Donor Requests</p>
-                            </div>
-                        </a>
-                        <a href="./manage_requirements.php" target="_blank">
-                            <div class="dashboard-action">
-                                <p>Manage Requirements</p>
-                            </div>
-                        </a>
+            <div class="manage-requirements-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="text-align:left;">Sl. No.</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Clothes for Teenage Kids</td>
+                            <td>14 Pieces</td>
+                            <td>
+                                <div class="requirement-actions disp-flex">
+                                    <a onclick="update_requirement();">Update</a>
+                                    <a>Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Clothes for Teenage Kids</td>
+                            <td>14 Pieces</td>
+                            <td>
+                                <div class="requirement-actions disp-flex">
+                                    <a>Update</a>
+                                    <a>Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Clothes for Teenage Kids</td>
+                            <td>14 Pieces</td>
+                            <td>
+                                <div class="requirement-actions disp-flex">
+                                    <a>Update</a>
+                                    <a>Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Clothes for Teenage Kids</td>
+                            <td>14 Pieces</td>
+                            <td>
+                                <div class="requirement-actions disp-flex">
+                                    <a>Update</a>
+                                    <a>Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-                        <a href="./settings.php" target="_blank">
-                            <div class="dashboard-action">
-                                <p>My Settings</p>
-                            </div>
-                        </a>
-                    </div>
+    <div class="add-requirement-modal-wrapper modal-wrapper" style="display: none;">
+        <div class="add-requirement-modal modal" style="width:350px;">
+            <div class="add-requirement-modal-body modal-body">
+                <div class="modal-title">
+                    <h1>Add Requirement</h1>
                 </div>
+                <form method="POST">
+                    <div class="signin-ip-block">
+                        <div class="requirement-image" style="background: url(../images/clothes.jpg) no-repeat; width: 134px; height: 90px; background-size: contain;"></div>
+                        <p style="color: #1e90ff; cursor:pointer;">Add Image</p>
+                    </div>
+                    <div class="signin-ip-block">
+                        <label for="uname">
+                            Name
+                        </label>
+                        <input type="text" class="signin-ip" name="req_name" placeholder="Requirement Name">
+                    </div>
+
+                    <div class="signin-ip-block">
+                        <label for="pwd">
+                            Quantity
+                        </label>
+                        <input type="text" class="signin-ip" name="req_qty" placeholder="Quantity Required">
+                    </div>
+
+                    <div class="signin-ip-block">
+                        <label for="pwd">
+                            Quantity Type
+                        </label>
+                        <select name="req_qty_type">
+                            <option value="">KG</option>
+                            <option value="">Litres</option>
+                            <option value="">Items</option>
+                            <option value="">Pieces</option>
+                        </select>
+                    </div>
+                
+                    <div class="disp-flex" style="margin-top: 4em;">
+                        <input type="button" name="submit" value="Add Requirement" title="Add Requirement">
+                        <button type="button" style="width: 90px; margin-left: auto;" data-secondary title="Cancel" onclick="document.querySelector('.add-requirement-modal-wrapper').style.display = 'none';">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="update-requirement-modal-wrapper modal-wrapper" style="display: none;">
+        <div class="update-requirement-modal modal" style="width:350px;">
+            <div class="update-requirement-modal-body modal-body">
+                <div class="modal-title">
+                    <h1>Update Requirement Details</h1>
+                </div>
+                <form method="POST">
+                    <div class="signin-ip-block">
+                        <div class="requirement-image" style="background: url(../images/clothes.jpg) no-repeat; width: 134px; height: 90px; background-size: contain;"></div>
+                        <p style="color: #1e90ff; cursor:pointer;">Add Image</p>
+                    </div>
+                    <div class="signin-ip-block">
+                        <label for="uname">
+                            Name
+                        </label>
+                        <input type="text" class="signin-ip" name="req_name" placeholder="Requirement Name">
+                    </div>
+
+                    <div class="signin-ip-block">
+                        <label for="pwd">
+                            Quantity
+                        </label>
+                        <input type="text" class="signin-ip" name="req_qty" placeholder="Quantity Required">
+                    </div>
+
+                    <div class="signin-ip-block">
+                        <label for="pwd">
+                            Quantity Type
+                        </label>
+                        <select name="req_qty_type">
+                            <option value="">KG</option>
+                            <option value="">Litres</option>
+                            <option value="">Items</option>
+                            <option value="">Pieces</option>
+                        </select>
+                    </div>
+                
+                    <div class="disp-flex" style="margin-top: 4em;">
+                        <input type="button" name="submit" value="Update" title="Update Requirement Details">
+                        <button type="button" style="width: 90px; margin-left: auto;" data-secondary title="Cancel" onclick="document.querySelector('.update-requirement-modal-wrapper').style.display = 'none';">Cancel</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

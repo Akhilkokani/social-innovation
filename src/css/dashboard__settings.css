@@ -1,0 +1,19 @@
+
+/*=============================================
+=            DASHBOARD SETTINGS CSS            =
+=============================================*/
+
+label {
+    font-size: 1.2em;
+}
+
+.a-setting {
+    margin-bottom: 2em;
+}
+
+a {
+    cursor: pointer;
+}
+
+/*=====  End of DASHBOARD SETTINGS CSS  ======*/
+

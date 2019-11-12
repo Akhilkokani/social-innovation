@@ -1,0 +1,22 @@
+/*===============================================================
+=            Dashboard Manage Requirements Page Stylesheet            =
+=================================================================*/
+
+table {
+    width: 100%;
+}
+
+td, th {
+    font-size: 1.5em;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+td .requirement-actions * {
+    font-size: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+/*=====  End of Dashboard Manage Requirements Page Stylesheet  ======*/
+
